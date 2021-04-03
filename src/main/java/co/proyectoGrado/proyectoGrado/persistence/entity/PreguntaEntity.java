@@ -32,7 +32,7 @@ public class PreguntaEntity {
     @Column(name = "opcion4")
     private String opcion4;
     @Column(name = "estado")
-    private boolean estado;
+    private char estado;
 
 
 }

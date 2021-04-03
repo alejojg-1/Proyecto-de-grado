@@ -26,6 +26,6 @@ public class RetoEntity {
     @Column(name = "comentario")
     private String comentario;
     @Column(name = "estado")
-    private boolean estado;
+    private char estado;
 
 }

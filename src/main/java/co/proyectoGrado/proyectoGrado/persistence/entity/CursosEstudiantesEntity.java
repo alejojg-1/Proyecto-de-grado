@@ -1,12 +1,10 @@
 package co.proyectoGrado.proyectoGrado.persistence.entity;
 
+import co.proyectoGrado.proyectoGrado.domain.model.Curso;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -14,9 +12,14 @@ import javax.persistence.Table;
 @NoArgsConstructor
 public class CursosEstudiantesEntity {
 
-    @Column(name="idEstudiantes")
-    private int idEstudiantes;
-    @Column(name="idCursos")
-    private int idCursos;
+    @Id
+    @Column(name="idCurso_estudiantes")
+    private int idCursoEstudiante;
+    @ManyToOne
+    @JoinColumn(name="idEstudiantes", insertable = false, updatable = false)
+    private EstudianteEntity estudiante;
+    @ManyToOne
+    @JoinColumn(name="idCursos", insertable = false, updatable = false)
+    private CursoEntitiy curso;
 
 }

@@ -12,11 +12,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name ="CATEGORIA_CONTENIDO")
 @NoArgsConstructor
-public class CategoriaEntity {
+public class CategoriaContenidoEntity {
 
     @Id
     @Column(name="idCategoria")
     private int idCategoria;
-    //private List<Pregunta> pregunta;
+    @Id
+    @Column(name="idPreguntas")
+    private int idPregunta;
 
 }

@@ -3,10 +3,8 @@ package co.proyectoGrado.proyectoGrado.persistence.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -21,4 +19,7 @@ public class CursoEntitiy {
     private String grado;
     @Column(name = "nombre")
     private String nombre;
+
+    @OneToMany(mappedBy = "curso")
+    private List<CursosEstudiantesEntity> cursoEstudiantes;
 }

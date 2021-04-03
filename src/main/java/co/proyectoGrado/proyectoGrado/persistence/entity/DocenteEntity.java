@@ -28,6 +28,6 @@ public class DocenteEntity {
     @Column(name = "contraseña")
     private String contraseña;
     @Column(name = "estado")
-    private boolean estado;
+    private char estado;
 
 }
