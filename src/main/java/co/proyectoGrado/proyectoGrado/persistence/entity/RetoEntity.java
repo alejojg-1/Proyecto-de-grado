@@ -28,4 +28,8 @@ public class RetoEntity {
 
     @OneToMany(mappedBy = "reto")
     private List<EstudianteJuegoEntity> juegoEstudiantes;
+
+    @OneToOne(mappedBy = "reto")
+    private JuegoPreguntasEntity juegoPregunta;
+
 }

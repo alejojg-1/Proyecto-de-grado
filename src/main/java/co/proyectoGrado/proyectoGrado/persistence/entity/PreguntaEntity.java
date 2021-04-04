@@ -35,4 +35,8 @@ public class PreguntaEntity {
     @OneToMany(mappedBy = "pregunta")
     private List<JuegoPreguntasEntity> juegoPreguntas;
 
+    @OneToOne(mappedBy = "pregunta")
+    private CategoriaContenidoEntity categoriaContenido;
+
+
 }

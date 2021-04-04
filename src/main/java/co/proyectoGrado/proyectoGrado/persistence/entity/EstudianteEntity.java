@@ -31,4 +31,6 @@ public class EstudianteEntity {
     @OneToMany(mappedBy = "estudiante")
     private List<CursosEstudiantesEntity> cursoEstudiantes;
 
+    @OneToOne(mappedBy = "estudiante")
+    private EstudianteJuegoEntity estudianteJuego;
 }

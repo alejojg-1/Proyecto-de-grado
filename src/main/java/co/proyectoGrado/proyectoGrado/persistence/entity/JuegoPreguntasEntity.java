@@ -17,7 +17,12 @@ public class JuegoPreguntasEntity {
     @ManyToOne
     @JoinColumn(name="idPreguntas", insertable = false, updatable = false)
     private PreguntaEntity pregunta;
-    @Column(name="idReto")
-    private int idReto;
+    @OneToOne
+    @JoinColumn(name="idReto", insertable = false, updatable = false)
+    private RetoEntity reto;
+
+    @OneToOne(mappedBy = "estudiantePregunta")
+    private EstudianteJuegoRespuestasEntity estudianteJuegoRespuesta;
+
 
 }

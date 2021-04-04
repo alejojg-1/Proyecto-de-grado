@@ -14,8 +14,9 @@ public class CursoContenidoEntity {
     @Id
     @Column(name = "idCurso_contenido")
     private int idCursoContenido;
-    @Column(name = "idCategoria_contenido")
-    private int idCategoriaContenido;
+    @OneToOne
+    @JoinColumn(name="idCategoria_contenido", insertable = false, updatable = false)
+    private CategoriaContenidoEntity categoriaContenido;
     @ManyToOne
     @JoinColumn(name="idCursos", insertable = false, updatable = false)
     private CursoEntitiy curso;
