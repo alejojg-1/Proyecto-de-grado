@@ -3,10 +3,8 @@ package co.proyectoGrado.proyectoGrado.persistence.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -28,4 +26,6 @@ public class RetoEntity {
     @Column(name = "estado")
     private char estado;
 
+    @OneToMany(mappedBy = "reto")
+    private List<EstudianteJuegoEntity> juegoEstudiantes;
 }

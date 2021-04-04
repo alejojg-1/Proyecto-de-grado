@@ -22,4 +22,12 @@ public class CursoEntitiy {
 
     @OneToMany(mappedBy = "curso")
     private List<CursosEstudiantesEntity> cursoEstudiantes;
+
+    @OneToMany(mappedBy = "curso")
+    private List<CursoDocenteEntity> cursoDocentes;
+
+    @OneToMany(mappedBy = "curso")
+    private List<CursoContenidoEntity> cursoContenidos;
+
+
 }

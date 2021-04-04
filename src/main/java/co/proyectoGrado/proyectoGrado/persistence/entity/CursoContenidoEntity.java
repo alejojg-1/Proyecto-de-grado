@@ -3,10 +3,7 @@ package co.proyectoGrado.proyectoGrado.persistence.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -19,8 +16,9 @@ public class CursoContenidoEntity {
     private int idCursoContenido;
     @Column(name = "idCategoria_contenido")
     private int idCategoriaContenido;
-    @Column(name = "cursos_idCusrsos")
-    private int cursosIdCursos;
+    @ManyToOne
+    @JoinColumn(name="idCursos", insertable = false, updatable = false)
+    private CursoEntitiy curso;
     @Column(name = "comentario")
     private String comentario;
     @Column(name = "descripcion")
