@@ -21,7 +21,7 @@ public class JuegoPreguntasEntity {
     @JoinColumn(name="idReto", insertable = false, updatable = false)
     private RetoEntity reto;
 
-    @OneToOne(mappedBy = "estudiantePregunta")
+    @OneToOne(mappedBy = "juegoPregunta")
     private EstudianteJuegoRespuestasEntity estudianteJuegoRespuesta;
 
 

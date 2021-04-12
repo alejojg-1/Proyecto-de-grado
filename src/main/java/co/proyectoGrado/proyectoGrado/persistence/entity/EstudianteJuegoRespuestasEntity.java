@@ -16,14 +16,14 @@ public class EstudianteJuegoRespuestasEntity {
     private int idEstudianteJuegoRespuestas;
     @OneToOne
     @JoinColumn(name="idJuego_preguntas", insertable = false, updatable = false)
-    private JuegoPreguntasEntity JuegoPregunta;
+    private JuegoPreguntasEntity juegoPregunta;
     @Column(name= "idPreguntas")
     private int idpreguntas;
     @Column(name= "idReto")
     private int idReto;
 
     @OneToOne(mappedBy = "estudianteJuegoRespuesta")
-    private EstudianteJuegoRespuestasEntity estudianteJuegoRespuesta;
+    private EstudianteJuegoEntity estudianteJuego;
 
 
 }
